@@ -227,6 +227,22 @@
     .editorial{padding:100px 24px}.editorial-grid{gap:18px}.reason{padding:32px;border-radius:18px;background:rgba(255,253,249,.68);transition:transform .2s,box-shadow .2s}.reason:hover{transform:translateY(-5px);box-shadow:0 18px 35px rgba(42,20,23,.08)}.reason b{font-size:48px;color:#bd9143}.reason h3{font-size:25px}.reason p{font-size:13px}.faq{padding:85px 24px}.faq details{border-color:#d9c4ae}.faq summary{font-size:22px;list-style:none;display:flex;justify-content:space-between;gap:18px}.faq summary::after{content:'+';font-family:'DM Sans',sans-serif;color:#b58431;font-size:24px;line-height:1}.faq details[open] summary::after{content:'−'}.faq p{font-size:14px}
     .footer{background:#130b10;color:#cdb5a0;padding:46px 24px;font-size:11px;letter-spacing:.03em}.fixed-buy{background:rgba(25,11,16,.94);border-top:1px solid rgba(214,168,79,.3)}.fixed-price{font-size:25px}.fixed-buy .cta{min-height:46px;padding:13px 24px}.modal-backdrop{background:rgba(18,7,12,.78)}.modal{border:1px solid #d6a84f;border-radius:22px;background:#fffdf9;box-shadow:0 25px 80px rgba(0,0,0,.38)}.modal-close{background:#f2e7dd}.modal-close svg{width:16px;height:16px;fill:none;stroke:var(--wine);stroke-width:1.8;stroke-linecap:round}.modal h2{font-size:42px}.modal-offer{border-color:#efd58d;background:#fff5d9}
     @media(max-width:800px){.head-row{padding:12px 16px}.product-info{padding:34px 22px}.product-info h1{font-size:48px}.plans,.editorial,.faq{padding-top:74px;padding-bottom:74px}.plan{padding:32px 26px}.section-head h2{font-size:45px}.fixed-buy{padding:10px 14px}.fixed-buy .cta{min-height:42px;padding:11px 15px}.fixed-price{font-size:21px}}
+
+    /* Popup CTA — acabamento editorial e oferta em primeiro plano */
+    .modal-backdrop{animation:modalBackdropIn .28s ease-out both}
+    .modal{overflow:hidden;padding:42px 42px 32px;border:1px solid rgba(214,168,79,.75);background:linear-gradient(180deg,#fffdf9 0%,#fbf4eb 100%);box-shadow:0 28px 90px rgba(16,5,10,.5);animation:modalIn .38s cubic-bezier(.2,.8,.2,1) both}
+    .modal::before{content:'';position:absolute;inset:0 0 auto;height:5px;background:linear-gradient(90deg,#8e2535,#e1b451,#8e2535)}
+    .modal::after{content:'';position:absolute;width:220px;height:220px;right:-110px;top:-120px;border-radius:50%;background:rgba(214,168,79,.1);pointer-events:none}
+    .modal-close{z-index:2;right:17px;top:17px;width:34px;height:34px;background:#f2e5d8;transition:transform .2s,background .2s}.modal-close:hover{transform:rotate(90deg);background:#ead5c2}.modal-close:focus-visible{outline:3px solid rgba(214,168,79,.45);outline-offset:3px}
+    .modal-seal{position:relative;display:grid;place-items:center;width:76px;height:76px;margin:0 auto 18px;border-radius:50%;background:linear-gradient(145deg,#f4d27d,#bd812b);box-shadow:0 12px 24px rgba(179,123,39,.25)}
+    .modal-seal::before{content:'';position:absolute;inset:5px;border:1px solid rgba(55,17,25,.28);border-radius:50%}.modal-seal-ring{display:grid;place-items:center;width:59px;height:59px;border-radius:50%;background:#fff8e8}.modal-seal svg{width:40px;height:40px;fill:none;stroke:#6a1c29;stroke-width:1.45;stroke-linecap:round;stroke-linejoin:round}
+    .modal-kicker{position:relative;z-index:1;color:#a16f27;font:700 10px/1 'DM Sans',sans-serif;letter-spacing:.2em;text-transform:uppercase}
+    .modal h2{position:relative;z-index:1;max-width:390px;margin:13px auto 12px;font:600 clamp(39px,6vw,51px)/.92 'Cormorant Garamond',Georgia,serif;letter-spacing:-.045em;color:#551522}
+    .modal>p{position:relative;z-index:1;max-width:390px;margin:0 auto;color:#76666a!important;font:400 14px/1.65 'DM Sans',sans-serif}.modal>p b{color:#5d1823;font-weight:800}
+    .modal-offer{position:relative;z-index:1;display:flex;align-items:center;justify-content:center;gap:15px;margin:24px auto 20px;padding:16px 18px;border:1px solid #ead08c;border-radius:15px;background:linear-gradient(135deg,#fff8df,#fff0c0);box-shadow:inset 0 1px 0 #fff}.modal-offer::before{content:'OFERTA ESPECIAL';position:absolute;top:-9px;left:50%;transform:translateX(-50%);padding:3px 9px;border-radius:99px;background:#6a1c29;color:#ffe6a5;font:800 8px/1 'DM Sans',sans-serif;letter-spacing:.14em}.modal-offer s{color:#9c8980;font:500 13px/1 'DM Sans',sans-serif}.modal-offer strong{margin-left:0;color:#5d1823;font:700 42px/.9 'Cormorant Garamond',Georgia,serif;letter-spacing:-.03em}
+    .modal .cta{position:relative;z-index:1;min-height:54px;font-size:10px}.continue{position:relative;z-index:1;color:#8b7775;font:500 12px 'DM Sans',sans-serif;transition:color .2s}.continue:hover{color:#5d1823}
+    @keyframes modalBackdropIn{from{opacity:0}to{opacity:1}}@keyframes modalIn{from{opacity:0;transform:translateY(18px) scale(.97)}to{opacity:1;transform:translateY(0) scale(1)}}
+    @media(max-width:800px){.modal{padding:38px 22px 26px;border-radius:20px}.modal-seal{width:68px;height:68px;margin-bottom:16px}.modal-seal-ring{width:53px;height:53px}.modal-seal svg{width:35px;height:35px}.modal h2{font-size:40px}.modal-offer{gap:11px}.modal-offer strong{font-size:38px}}
   </style>
 </head>
 <body>
@@ -420,8 +436,12 @@
   <div class="modal-backdrop" id="modal" hidden>
     <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal-close" id="closeModal" aria-label="Fechar"><svg viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></svg></button>
-      <div style="font-size:28px">★</div>
-      <div class="eyebrow" style="margin-top:15px">Oferta exclusiva desbloqueada</div>
+      <div class="modal-seal" aria-hidden="true">
+        <div class="modal-seal-ring">
+          <svg viewBox="0 0 48 48"><path d="M14 19.5h20v14H14z"/><path d="M14 22.5h20M24 19.5v14M14 19.5c-4.5-1-5.5-7.5-1.4-8.6 2.8-.8 4.6 2.4 5.4 5.1 1.2-4.4 4.1-6.5 6-4.2 1.9-2.3 4.8-.2 6 4.2.8-2.7 2.6-5.9 5.4-5.1 4.1 1.1 3.1 7.6-1.4 8.6"/><path d="m36.5 5 .8 2.2L39.5 8l-2.2.8-.8 2.2-.8-2.2-2.2-.8 2.2-.8.8-2.2Z"/></svg>
+        </div>
+      </div>
+      <div class="modal-kicker">Oferta exclusiva desbloqueada</div>
       <h2 id="modalTitle">Leve 125+ livros com 20% OFF</h2>
       <p style="color:#795f51;line-height:1.6;font-size:15px">Você clicou no plano essencial. Por apenas <b>R$ 29,60</b>, leve o plano premium completo.</p>
       <div class="modal-offer"><s>R$ 37,00</s><strong>R$ 29,60</strong></div>
